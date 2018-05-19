@@ -10,11 +10,11 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button button0, button1, button2, button3, button4, button5, button6,
-            button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
+            button7, button8, button9, buttonAdd, buttonSub, buttonDiv,
             buttonMul, button10, buttonC, buttonEqual;
-    TextView ResultTextView;
+    TextView PreResultTextView, ResultTextView;
 
-    float mValueOne, mValueTwo;
+    double mValueOne, mValueTwo;
 
     boolean Addition, Subtraction, Multiplication, Division;
 
@@ -37,18 +37,34 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd = findViewById(R.id.buttonadd);
         buttonSub = findViewById(R.id.buttonsub);
         buttonMul = findViewById(R.id.buttonmul);
-        buttonDivision = findViewById(R.id.buttondiv);
+        buttonDiv = findViewById(R.id.buttondiv);
         buttonC = findViewById(R.id.buttonC);
         buttonEqual = findViewById(R.id.buttoneql);
-        ResultTextView = findViewById(R.id.edt1);
+        PreResultTextView = findViewById(R.id.preRes);
+        ResultTextView = findViewById(R.id.res);
 
         ResultTextView.setMovementMethod(new ScrollingMovementMethod());
 
+
+        // TYPE NUMBERS
+        button0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResultTextView.setText(ResultTextView.getText() + "0");
+            }
+        });
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ResultTextView.setText(ResultTextView.getText() + "1");
+            }
+        });
+
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResultTextView.setText(ResultTextView.getText() + ".");
             }
         });
 
@@ -108,22 +124,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ResultTextView.setText(ResultTextView.getText() + "0");
-            }
-        });
-
+        // ACTUAL MATHS
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (ResultTextView == null) {
-                    ResultTextView.setText("");
-                } else {
-                    mValueOne = Float.parseFloat(ResultTextView.getText() + "");
+                if (ResultTextView != null) {
+                    mValueOne = Double.parseDouble(ResultTextView.getText() + "");
                     Addition = true;
+                    PreResultTextView.setText("+");
                     ResultTextView.setText(null);
                 }
             }
@@ -132,8 +140,9 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(ResultTextView.getText() + "");
+                mValueOne = Double.parseDouble(ResultTextView.getText() + "");
                 Subtraction = true;
+                PreResultTextView.setText("-");
                 ResultTextView.setText(null);
             }
         });
@@ -141,17 +150,19 @@ public class MainActivity extends AppCompatActivity {
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(ResultTextView.getText() + "");
+                mValueOne = Double.parseDouble(ResultTextView.getText() + "");
                 Multiplication = true;
+                PreResultTextView.setText("×");
                 ResultTextView.setText(null);
             }
         });
 
-        buttonDivision.setOnClickListener(new View.OnClickListener() {
+        buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(ResultTextView.getText() + "");
+                mValueOne = Double.parseDouble(ResultTextView.getText() + "");
                 Division = true;
+                PreResultTextView.setText("÷");
                 ResultTextView.setText(null);
             }
         });
@@ -159,20 +170,22 @@ public class MainActivity extends AppCompatActivity {
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(ResultTextView.getText() + "");
-
-                if (Addition){
-                    ResultTextView.setText(mValueOne + mValueTwo + "");
-                    Addition = false;
-                } else if (Subtraction) {
-                    ResultTextView.setText(mValueOne - mValueTwo + "");
-                    Subtraction = false;
-                } else if (Multiplication) {
-                    ResultTextView.setText(mValueOne * mValueTwo + "");
-                    Multiplication = false;
-                } else if (Division) {
-                    ResultTextView.setText(mValueOne / mValueTwo + "");
-                    Division = false;
+                if (mValueOne != 0) {
+                    mValueTwo = Double.parseDouble(ResultTextView.getText() + "");
+                    PreResultTextView.setText("");
+                    if (Addition) {
+                        ResultTextView.setText(mValueOne + mValueTwo + "");
+                        Addition = false;
+                    } else if (Subtraction) {
+                        ResultTextView.setText(mValueOne - mValueTwo + "");
+                        Subtraction = false;
+                    } else if (Multiplication) {
+                        ResultTextView.setText(mValueOne * mValueTwo + "");
+                        Multiplication = false;
+                    } else if (Division) {
+                        ResultTextView.setText(mValueOne / mValueTwo + "");
+                        Division = false;
+                    }
                 }
             }
         });
@@ -181,14 +194,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ResultTextView.setText("");
+                PreResultTextView.setText("");
             }
         });
+    }
 
-        button10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ResultTextView.setText(ResultTextView.getText() + ".");
-            }
-        });
+    public void UpdatePreResult(View v) {
+        Button NumberButton = (Button) v;
+        if (mValueOne != 0) {
+            PreResultTextView.setText(NumberButton.getText().toString() + Double.parseDouble(ResultTextView.getText() + ""));
+        }
     }
 }

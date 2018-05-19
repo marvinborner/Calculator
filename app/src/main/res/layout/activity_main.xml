@@ -7,21 +7,61 @@
     tools:context=".MainActivity">
 
     <TableLayout
-        android:id="@+id/tableLayout2"
+        android:id="@+id/tableLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648">
+        app:layout_constraintVertical_bias="0.675">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="1"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="2"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="3"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
 
             <Button
                 android:id="@+id/buttondiv"
@@ -44,11 +84,51 @@
                 android:typeface="monospace"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="16dp" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="4"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="5"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="6"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
 
             <Button
                 android:id="@+id/buttonmul"
@@ -67,6 +147,45 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/button7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="7"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="8"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="9"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
                 android:id="@+id/buttonadd"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -80,7 +199,36 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="92dp">
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:text="."
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="monospace"
+                android:onClick="UpdatePreResult"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
 
             <Button
                 android:id="@+id/buttonsub"
@@ -106,191 +254,39 @@
 
     </TableLayout>
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tableLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="1"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="2"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="3"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="4"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="5"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="6"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="7"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="8"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="9"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="."
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-            <Button
-                android:id="@+id/button0"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:fontFamily="monospace"
-                android:text="0"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:textSize="30sp"
-                android:typeface="monospace"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp" />
-
-        </TableRow>
-
-    </TableLayout>
-
     <TextView
-        android:id="@+id/edt1"
+        android:id="@+id/res"
         android:layout_width="334dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
         android:fontFamily="monospace"
         android:maxLines="1"
         android:scrollbars="horizontal"
         android:textSize="50sp"
         android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/preRes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/preRes"
+        android:layout_width="334dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="monospace"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30sp"
+        android:typeface="monospace"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
